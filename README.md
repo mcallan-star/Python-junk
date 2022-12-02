@@ -1,14 +1,26 @@
 # python-junk
 
-teaching myself to simulate physics. started with a projectile that just falls, slowly figuring out that the hard part isn't the physics its the *numbers* -- how you step time forward without the whole thing falling apart.
+teaching myself to simulate physics in python. started with a projectile that just falls and i'm slowly working my way up. the hard part is never the physics, its the numbers -- stepping time without it blowing up.
 
-its called junk for a reason. there's a scratch/ folder that's pure chaos.
+its called junk for a reason. there's a `scratch/` folder that's pure chaos and at least two files that do almost the same thing.
 
 ## stuff so far
-- **projectile motion** -- threw a ball, did euler by hand. works.
-- **oscillators** -- spring, pendulum (small angle vs the real nonlinear one, they split apart for big swings). my euler kept *gaining* energy which freaked me out
-- **euler vs rk4** -- turns out euler is bad and rk4 is the fix. energy stays flat now
-- **root finding + integration** -- bisection, newtons method, trapezoid/simpson, all rolled by hand so i actually understand them
+- **projectile motion** -- euler by hand, with and without air drag
+- **oscillators** -- spring, pendulum (small angle vs full nonlinear), damped + driven, resonance. then i reorganized into `oscillators/` and left half of it in `damped/`, oops
+- **euler vs rk4** -- euler leaks energy, rk4 fixes it. this lesson keeps coming back
+- **numerical methods** -- bisection, newton, trapezoid/simpson, all hand-rolled
+- **randomness** -- 1d/2d random walks (they spread like sqrt(N)!), monte carlo pi
+- **waves + fourier** -- this is where my optics class snuck in. interference, the double slit (did it wrong once then right), FFT to pull tones out of noise, gaussian beams and the fresnel equations (brewster angle!)
+
+## a couple results
+
+the double slit, done properly -- fast fringes under the slow diffraction envelope:
+
+![double slit](media/double_slit.png)
+
+two point sources interfering (intensity = |sum of the waves|squared):
+
+![interference](media/interference.png)
 
 ## next
-random walks, monte carlo, and waves once i wrap my head around fourier
+n-body gravity (planets!), and the heat equation, which i keep breaking
