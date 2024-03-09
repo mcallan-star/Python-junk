@@ -1,0 +1,7 @@
+# half-hearted gitignore, added way too late
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.mp4
+# (the gifs in media/ ARE tracked on purpose, those are the whole point)
