@@ -1,0 +1,6 @@
+# what you need to run the notebooks (and what mybinder.org installs)
+numpy
+scipy
+matplotlib
+ipywidgets
+pillow
